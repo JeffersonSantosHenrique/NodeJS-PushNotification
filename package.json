@@ -1,0 +1,11 @@
+{
+  "name": "fcm-node-webapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Jefferson Santos",
+  "license": "ISC",
+  "dependencies": {
+    "fcm-node": "^1.0.16"
+  }
+}
