@@ -1,27 +1,25 @@
-var FCM = require('fcm-node');
+const FCM = require('fcm-node');
 
-var serverKey = '';
-var fcm = new FCM(serverKey);
+let serverKey = '';
+const fcm = new FCM(serverKey);
 
-var message = {
+const message = {
     to: '', 
-    collapse_key: 'your_collapse_key',
-    
+    collapse_key: 'your_collapse_key',    
     notification: {
         title: 'Title Jeh', 
-        body: 'Body' 
-    },
-    
+        body: 'Body'
+    },    
     data: {
         my_key: 'my value',
         my_another_key: 'my another value'
     }
 };
 
-fcm.send(message, function(err, response){
+fcm.send(message, (err, res) => {
     if (err) {
         console.log("Something has gone wrong!");
     } else {
-        console.log("Successfully sent with response: ", response);
+        console.log("Successfully sent with response: ", res);
     }
 });
